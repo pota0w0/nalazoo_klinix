@@ -1,0 +1,152 @@
+/* All */
+
+/* marquee */
+.marquee { padding:0.5em 0; overflow:hidden; margin-bottom:10px; position:relative; }
+.marquee p:after { content:""; white-space:nowrap; padding-right:50px; }
+.marquee p { 
+    margin:0; 
+    padding-left:100%; 
+    display:inline-block; 
+    white-space:nowrap;
+    -webkit-animation-name:marquee;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-duration:40s;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-name:marquee;
+    -moz-animation-timing-function:linear;
+    -moz-animation-duration:40s;
+    -moz-animation-iteration-count:infinite;
+    -ms-animation-name:marquee;
+    -ms-animation-timing-function:linear;
+    -ms-animation-duration:40s;
+    -ms-animation-iteration-count:infinite;
+    -o-animation-name:marquee;
+    -o-animation-timing-function:linear;
+    -o-animation-duration:40s;
+    -o-animation-iteration-count:infinite;
+    animation-name:marquee;
+    animation-timing-function:linear;
+    animation-duration:40s;
+    animation-iteration-count:infinite;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+@-webkit-keyframes marquee {
+  from   { -webkit-transform: translate(0%);}
+  99%,to { -webkit-transform: translate(-100%);}
+}
+@-moz-keyframes marquee {
+  from   { -moz-transform: translate(0%);}
+  99%,to { -moz-transform: translate(-100%);}
+}
+@-ms-keyframes marquee {
+  from   { -ms-transform: translate(0%);}
+  99%,to { -ms-transform: translate(-100%);}
+}
+@-o-keyframes marquee {
+  from   { -o-transform: translate(0%);}
+  99%,to { -o-transform: translate(-100%);}
+}
+@keyframes marquee {
+  from   { transform: translate(0%);}
+  99%,to { transform: translate(-100%);}
+}
+
+
+
+/* main */
+.main_setion01{ background: #f3f3f3;}
+
+.main_setion02{ width: 100%; overflow: hidden; margin: 0 auto; margin-bottom: 100px; border-top: 2px solid #000; box-sizing: border-box; }
+.main_setion02 .series_head{ margin: 0 auto; text-align: center; margin-top: 80px; }
+
+.main_setion02 .contents { overflow: hidden; margin: 0 auto; margin-top: 80px; }
+.main_setion02 .contents .prodct{ margin: 0 1%; box-sizing: border-box; float: left; margin-bottom: 2%; border: 2px solid #000; }
+.main_setion02 .contents .prodct .prod_img{ position: relative; width: 100%; height: 0; padding-bottom: 100%; overflow: hidden; background: #ebebeb; box-sizing: border-box; }
+.main_setion02 .contents .prodct .prod_img img{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.main_setion02 .contents .prodct .prod_txt{ position: relative; width: 100%; overflow: hidden; box-sizing: border-box; }
+.main_setion02 .contents .prodct .prod_txt .txt_wrap{ position: absolute; top: 50%; left: 5%; transform: translate(0, -50%);}
+
+
+/* pc */
+@media screen and (min-width: 1024px){
+    
+    
+
+    /* main */
+    .main_setion01{ position: relative; width: 100%; height: 41.6667vw; }
+    .main_setion01 .p_img{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+    .main_setion01 .marquee p{ font-size: 6.25vw; line-height: 8.25vw; }
+    .main_setion01 .t_img,.main_setion01 .m_img{ display: none;}
+    .main_setion01 .p_img_color{ display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+    
+
+    .main_setion02 .series_head{ width: 90%; }
+    .main_setion02 .series_head .series_h2{ font-size: 25px; line-height: 35px; font-weight: bold; margin-bottom: 30px;}
+    .main_setion02 .series_head .series_text{ font-size: 16px; line-height: 30px;}
+
+    .main_setion02 .contents { width: 90%; }
+    .main_setion02 .contents .prodct{ width: calc(94%/4); }
+    .main_setion02 .contents .prodct:nth-child(4n){ margin-right: 0;}
+    .main_setion02 .contents .prodct:nth-child(4n+1){ margin-left: 0 ;}
+    .main_setion02 .contents .prodct .prod_txt{ height: 7.8125vw; padding: 30px 15px; }
+    .main_setion02 .contents .prodct .prod_txt .prod_h{ font-size: 1.2500vw; line-height: 1.2500vw; font-weight: bold; margin-bottom: 20px;}
+    .main_setion02 .contents .prodct .prod_txt .prod_t{ font-size: 0.7071vw; line-height: 0.7071vw; }
+
+    .main_setion02 .contents .prodct a:hover .prod_img img{ transform: scale(1.02); transition: all 0.2s linear; }
+    
+}
+
+@media screen and (min-width: 1180px){
+   
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    
+
+    /* main */
+    .main_setion01{ position: relative; width: 100%; height: 60.9756vw; }
+    .main_setion01 .t_img{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+    .main_setion01 .marquee p{font-size: 9.7561vw; line-height: 12.1951vw; }
+    .main_setion01 .p_img,.main_setion01 .m_img, .main_setion01 .p_img_color { display: none;}
+
+    .main_setion02 .series_head{ width: 98%; }
+    .main_setion02 .series_head .series_h2{ font-size: 25px; line-height: 35px; font-weight: bold; margin-bottom: 30px;}
+    .main_setion02 .series_head .series_text{ font-size: 16px; line-height: 30px;}
+
+    .main_setion02 .contents { width: 98%; }
+    .main_setion02 .contents .prodct{ width: calc(94%/3); }
+    .main_setion02 .contents .prodct .prod_txt{ height: 12.1951vw; padding: 30px 15px; }
+    .main_setion02 .contents .prodct .prod_txt .prod_h{ font-size: 1.9512vw; line-height: 1.9512vw; font-weight: bold; margin-bottom: 20px;}
+    .main_setion02 .contents .prodct .prod_txt .prod_t{ font-size: 1.4634vw; line-height: 1.4634vw; }
+}
+
+
+/* mobile */
+@media screen and (max-width: 767px){
+    
+
+    /* main */
+    .main_setion01{ position: relative; width: 100%; height: 100vw; }
+    .main_setion01 .m_img{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+    .main_setion01 .marquee p{ font-size: 15.3846vw; line-height: 20.5128vw; }
+    .main_setion01 .p_img,.main_setion01 .t_img, .main_setion01 .p_img_color{ display: none;}
+    
+
+    .main_setion02 .series_head{ width: 95%; }
+    .main_setion02 .series_head .series_h2{ font-size: 25px; line-height: 35px; font-weight: bold; margin-bottom: 30px;}
+    .main_setion02 .series_head .series_text{ font-size: 16px; line-height: 30px;}
+
+    .main_setion02 .contents { width: 95%; }
+    .main_setion02 .contents .prodct{ width: calc(96%/2); }
+    .main_setion02 .contents .prodct .prod_txt{ height: 25.6410vw; padding: 30px 15px; }
+    .main_setion02 .contents .prodct .prod_txt .prod_h{ font-size: 3.5897vw; line-height: 3.5897vw; font-weight: bold; margin-bottom: 20px;}
+    .main_setion02 .contents .prodct .prod_txt .prod_t{ font-size: 2.5641vw; line-height: 3.5897vw; }
+}
+
+
+/* iphone5 & SE */
+@media screen and (max-width: 320px){
+   
+}

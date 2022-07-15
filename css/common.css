@@ -1,0 +1,182 @@
+/* base - 브라우저 초기화 */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+*{ color: #212121; font-family: 'Prompt', sans-serif, AppleSDGothicNeo-Light, AppleGothic,sans-serif; margin: 0; padding: 0; }
+li{ list-style: none; } 
+a{ text-decoration: none; } 
+img{ border: none; -webkit-user-drag: none; }
+table{ border-collapse: collapse; border-spacing: 0; } 
+address{ font-style: normal; } 
+fieldset{ border: none; } 
+legend{ position: absolute; left: -999em; } 
+input[type=button], input[type=submit], input[type=reset], input[type=image], button, select{ cursor: pointer;} 
+label.away{ position: absolute; left: -999em; } 
+body{ -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+
+
+
+
+
+/* header */
+
+#header{width: 100%; height:2.6042vw; transition: all 0.5s ease-in-out; text-align: center; }
+
+#lnb.fixed{position: fixed; left: 0; top: 0; width: 100%; z-index: 10; }
+#lnb.fixed .h_wrap{ border-top: 0; }
+#lnb .h_wrap{ position: relative; height: 100px; margin: 0 auto; border: 2px solid #000; box-sizing: border-box; background: #fff;  }
+#lnb .h_wrap button{ position: absolute; top: 50%; left: 5%; transform: translate(0, -50%); border: none; background: transparent; }
+#lnb .h_wrap button > img{ width: 180px;}
+
+#lnb, #lnb .h_wrap, #lnb.small .h_wrap{ transition: font-size 0.5s, height 0.5s; -webkit-transition: font-size 0.5s, height 0.5s; -moz-transition: font-size 0.5s, height 0.5s; box-sizing: border-box; }
+#lnb.small .h_wrap{ height: 75px; }
+
+
+/* nav */
+#lnb .h_wrap nav a { text-transform: uppercase; }
+
+
+/* container */
+#container { width: 100%; height: auto; overflow: hidden; margin: 0 auto; border: 2px solid #000; border-top: 0; box-sizing: border-box; }
+
+
+
+/* top_button */
+#top_button{ position: fixed; }
+#top_button .top_arrow{ position: relative; height: auto; overflow: hidden; }
+#top_button .top_arrow img{ position: absolute; top: 0; width: 100%; height: 100%;}
+#top_button .top_icon{ position: relative; height: auto; box-sizing: border-box; overflow: hidden; }
+#top_button .top_icon img{ position: absolute; top: 0; width: 100%; height: 100%;}
+
+
+/* footer */
+#footer{ width: 100%; overflow: hidden; }
+.f_wrap{ margin: 0 auto; padding: 50px 5%; box-sizing: border-box; background-color: #212121; }
+#footer .f_text p{ color: #ababab;}
+#footer .f_text .middle{ margin: 10px 0;}
+
+
+
+/* pc */
+@media screen and (min-width: 1024px){
+
+    /* header */
+    #lnb .h_wrap{ width: 90%; }
+    
+
+    /* nav */
+    #lnb .h_wrap nav{ position: absolute; top: 50%; right: 5%; transform: translate(0, -50%);}
+    #lnb .h_wrap nav a{ text-align: center; font-size: 24px; font-weight: bold; margin-left: 20px;}
+
+    #lnb .h_wrap nav a:hover { border-bottom: 2px solid #000;}
+
+    /* container */
+    #container { width:90%; }
+    #container.c_fixed{ margin-top: 6.2500vw;}
+    
+    /* top_button */
+    #top_button{  right: 1.5%; bottom: 25px; }
+    #top_button .top_arrow{ width: 50px; padding-bottom: 75px; }
+
+    #top_button .top_icon{ width: 50px; padding-bottom: 50px; transition : all .35s;}
+
+    /* footer */
+    .f_wrap{ width: 90%;}
+}
+
+@media screen and (min-width: 1180px){
+    
+    
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    /* header */
+    #lnb .h_wrap{ width: 88%; position: relative; }
+
+    /* gnb */
+    .panelbtn{ width: 35px; height: 30px; overflow: hidden; position: absolute; top: 50%; right: 2%; transform: translate(0, -50%); }
+    .panelbtn a{ display: block; width: 100%; height: 100%; position: relative; transition: 0.3s; }
+    .panelbtn span{ display: block; width: 100%; height: 3px; background-color: #373737; position: absolute; right: 0; transition: 0.3s; }
+    .panelbtn .line01{ top: 5px;}
+    .panelbtn .line02{ top: 15px;}
+    .panelbtn .line03{ top: 25px;}
+    .panelbtn.on{ z-index: 10; }
+    .panelbtn a.on{ transform: rotate(45deg);  z-index: 11;}
+    .panelbtn a.on span{ background-color: #000; }
+    .panelbtn a.on .line02{ transform: scaleX(0); }
+    .panelbtn a.on .line01{ top: 15px; }
+    .panelbtn a.on .line03{ top: 15px; transform: rotate(90deg); }
+
+    .gnb{ width: 100%; height: auto; overflow: hidden; padding:12.1951vw 0; box-sizing: border-box; position: fixed; top: -100%; left: 0; background-color: #f3f3f3; z-index: 5;  }
+    .gnb.on{ top:0; transition: 0.9s; }
+
+    .gnb > a{ display: block; position: relative; width: 100%; padding: 2% 6%; box-sizing: border-box; border: 2px solid #000; border-left: 0; border-right: 0; font-size: 4.2683vw; font-weight: bold; text-transform: uppercase; }
+
+    
+    .gnb > a::after{ position: absolute; top: 50%; right: 6%; transform: translate(0,-50%); content: url("https://nalazoocare.com/klinix/img/common/nav_arrow.svg"); width: 12%; padding-right: 6%; box-sizing: border-box; }
+    .gnb > a:nth-child(2n){ border: 0;}
+    
+    .blackbg{ position: fixed; width: 100%; height: 100%; background-color: transparent; z-index: 4; display: none; top: 0; left: 0; }
+    .blackbg.on{ display: block; }
+
+    #top_button{  right: 0.5%; bottom: 25px; }
+    #top_button .top_arrow{ width: 40px; padding-bottom: 60px; }
+
+    #top_button .top_icon{ width: 40px; padding-bottom: 40px;}
+
+     /* container */
+     #container { width:88%; }
+     #container.c_fixed{ margin-top: 12.1951vw;}
+
+    /* footer */
+    .f_wrap{ width: 88%;}
+}
+
+/* mobile */
+@media screen and (max-width: 767px){
+
+    /* header */
+    #lnb .h_wrap{ width: 98%; }
+
+    /* gnb */
+    .panelbtn{ width: 30px; height: 30px; overflow: hidden; position: absolute; top: 50%; right: 2%; transform: translate(0, -50%); }
+    .panelbtn a{ display: block; width: 100%; height: 100%; position: relative; transition: 0.3s; }
+    .panelbtn span{ display: block; width: 100%; height: 3px; background-color: #373737; position: absolute; right: 0; transition: 0.3s; }
+    .panelbtn .line01{ top: 5px;}
+    .panelbtn .line02{ top: 15px;}
+    .panelbtn .line03{ top: 25px;}
+    .panelbtn.on{ z-index: 10; }
+    .panelbtn a.on{ transform: rotate(45deg);  z-index: 11;}
+    .panelbtn a.on span{ background-color: #000; }
+    .panelbtn a.on .line02{ transform: scaleX(0); }
+    .panelbtn a.on .line01{ top: 15px; }
+    .panelbtn a.on .line03{ top: 15px; transform: rotate(90deg); }
+
+    .gnb{ width: 100%; height: auto; overflow: hidden; padding: 20.641vw 0; box-sizing: border-box; position: fixed; top: -100%; left: 0; background-color: #f3f3f3; z-index: 5;  transition: 0.9s; }
+    .gnb.on{ top:0; transition: 0.9s; }
+
+    .gnb > a{ display: block; position: relative; width: 100%; padding: 2% 6%; box-sizing: border-box; border: 2px solid #000; border-left: 0; border-right: 0; font-size: 7.6923vw; font-weight: bold; text-transform: uppercase; }
+    .gnb > a:nth-child(2n){ border: 0;}
+    .gnb > a::after{ position: absolute; top: 50%; right: 6%; transform: translate(0,-50%); content: url("https://nalazoocare.com/klinix/img/common/nav_arrow.svg"); width: 15%; padding-right: 6%; box-sizing: border-box; }
+    
+    .blackbg{ position: fixed; width: 100%; height: 100%; background-color: transparent; z-index: 4; display: none; top: 0; left: 0; }
+    .blackbg.on{ display: block; }
+
+    #top_button{ display: none; right: 0; bottom: 25px; }
+    #top_button .top_arrow { width: 30px; padding-bottom: 45px; }
+
+    #top_button .top_icon{ width: 30px; padding-bottom: 30px;}
+
+    /* container */
+    #container { width:98%; }
+    #container.c_fixed{ margin-top: 25.6410vw;}
+
+    /* footer */
+    .f_wrap{ width: 98%;}
+}
+
+/* iphone5 & SE */
+@media screen and (max-width: 320px){
+
+}
